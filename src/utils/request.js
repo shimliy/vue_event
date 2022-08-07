@@ -10,7 +10,7 @@ requests.interceptors.request.use((config) => {
   return config
 })
 
-// 相应拦截器
+// 响应拦截器
 requests.interceptors.response.use((response) => {
   return response.data
 }, (error) => {
