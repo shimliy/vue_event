@@ -1,8 +1,8 @@
+// 引入vuex-persist
 const state = {
-  token: ''
+  token: window.localStorage.getItem('token')
 }
 const actions = {
-
 }
 const mutations = {
   // 获取登录时的token
@@ -13,6 +13,8 @@ const mutations = {
 const getters = {
 
 }
+
+// console.log(vuexLocal.plugin)
 export default {
   state,
   actions,

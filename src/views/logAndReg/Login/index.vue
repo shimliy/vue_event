@@ -58,13 +58,13 @@ export default {
       this.$refs.loginRef.validate(async valid => {
         if (!valid) return this.$message({ type: 'error', message: '请重新登录' })
         const result = await this.$API.reqLogin(this.loginForm)
-        console.log(result)
         if (result.code === 0) {
           this.$message({ type: 'success', message: result.message })
           // 保存一份token到本地
           window.localStorage.setItem('token', result.token)
           // 保存一份token到vuex仓库中
           this.GETNEWTOKEN(result.token)
+          this.$router.push('/')
         }
       })
     }

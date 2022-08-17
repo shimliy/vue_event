@@ -16,6 +16,10 @@ const routes = [
     path: '/register',
     component: () => import('@/views/logAndReg/Register')
   },
+  {
+    path: '/',
+    component: () => import('@/views/Layout')
+  },
   // 配置重定向
   {
     path: '*',
