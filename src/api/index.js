@@ -27,3 +27,13 @@ export const reqUserInfo = () => {
     }
   })
 }
+
+// 获取侧边栏信息
+export const getMenuList = () => {
+  return requests({
+    url: '/my/menus',
+    headers: {
+      Authorization: store.state.login.token
+    }
+  })
+}
